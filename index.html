@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Cariny Perez is a full-stack developer building React, TypeScript, Node and GraphQL applications on AWS.">
+<meta name="theme-color" content="#02aab0">
+<title>Cariny Perez | Full-stack developer</title>
+<style>
+:root{
+  --bg:#0c1117; --surface:#151c25; --text:#e6edf3; --muted:#9aa7b4;
+  --accent:#02aab0; --accent-ink:#04282a; --line:#25303c;
+  --font:"Avenir Next","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme:light){
+  :root:not([data-theme="dark"]){--bg:#f6f9fa;--surface:#fff;--text:#14202b;--muted:#506070;--line:#d9e3e8;--accent:#018489;--accent-ink:#fff}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.65;font-size:1.0625rem}
+a{color:var(--accent)}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:960px;margin:0 auto;padding:0 1.5rem}
+section{padding:5.5rem 0}
+h1,h2,h3{line-height:1.15;margin:0}
+h2{font-size:clamp(1.8rem,4vw,2.4rem);margin-bottom:2rem;display:flex;align-items:center;gap:1rem}
+h2::after{content:"";flex:1;height:1px;background:var(--line)}
+header.nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+.nav a{text-decoration:none;color:var(--text);font-weight:600}
+.nav nav{display:flex;gap:1.5rem}
+.nav nav a{color:var(--muted);font-weight:500}
+.nav nav a:hover{color:var(--accent)}
+.hero{min-height:calc(100vh - 60px);display:flex;align-items:center;padding:3rem 0}
+.hero h1{font-size:clamp(2.4rem,7vw,4.6rem);letter-spacing:-.02em;max-width:14ch}
+.hero h1 span{color:var(--accent)}
+.hero p{color:var(--muted);max-width:52ch;margin:1.5rem 0 2.25rem;font-size:1.2rem}
+.btn{display:inline-block;padding:.85rem 1.6rem;border:2px solid var(--accent);border-radius:6px;background:var(--accent);color:var(--accent-ink);font-weight:700;text-decoration:none}
+.btn.ghost{background:transparent;color:var(--accent)}
+.btn:hover{filter:brightness(1.1)}
+.about{display:grid;gap:2.5rem;grid-template-columns:3fr 2fr}
+.about p{margin:0 0 1.1rem;max-width:62ch}
+.skills{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.6rem;align-content:flex-start}
+.skills li{border:1px solid var(--line);background:var(--surface);padding:.35rem .9rem;border-radius:999px;font-size:.95rem}
+.projects{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.project{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:8px;padding:1.5rem}
+.project h3{font-size:1.2rem;margin-bottom:.6rem}
+.project p{margin:0;color:var(--muted);font-size:1rem}
+.contact{text-align:center}
+.contact h2{justify-content:center}
+.contact h2::after,.contact h2::before{content:"";flex:1;height:1px;background:var(--line)}
+.contact p{color:var(--muted);max-width:46ch;margin:0 auto 2rem}
+.links{display:flex;gap:1.5rem;justify-content:center;margin-top:2rem;flex-wrap:wrap}
+footer{border-top:1px solid var(--line);padding:1.5rem 0 calc(1.5rem + env(safe-area-inset-bottom,0px));color:var(--muted);font-size:.9rem;text-align:center}
+@media (max-width:720px){.about{grid-template-columns:1fr}.nav nav{gap:1rem}section{padding:4rem 0}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a href="#top">Cariny Perez</a>
+    <nav aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <h1>Hi, my name is <span>Cariny</span>. I'm a full-stack developer.</h1>
+      <p>I build web applications with React, TypeScript, Node and GraphQL, and I use AI every day to prototype and ship faster.</p>
+      <a class="btn" href="#about">Know more</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <h2>About me</h2>
+      <div class="about">
+        <div>
+          <p>I'm a full-stack software engineer with five years of development experience and seven years working at startups. At Equips I work across the stack on React, TypeScript, Node, GraphQL and AWS.</p>
+          <p>I use Claude daily to design, prototype and ship features, and I co-lead AI skills sessions for my engineering team.</p>
+        </div>
+        <ul class="skills" aria-label="Skills">
+          <li>React</li><li>TypeScript</li><li>Node</li><li>GraphQL</li><li>AWS</li><li>AI-assisted development</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <h2>Projects</h2>
+      <div class="projects">
+        <article class="project">
+          <h3>Recurring service request schedules</h3>
+          <p>Lets users set up recurring preventative maintenance once. Before this, every service request had to be created by hand.</p>
+        </article>
+        <article class="project">
+          <h3>Productivity dashboard</h3>
+          <p>A dashboard built for a major insurance client, with a working mock made in Claude Code to get stakeholder feedback early.</p>
+        </article>
+        <article class="project">
+          <h3>Invoice and cancellation auto-linking</h3>
+          <p>An AI-assisted workflow that automatically links invoices and cancellations in the service inbox.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <p>Want to work together or just say hello? Send me an email.</p>
+      <a class="btn" href="mailto:perezcariny@gmail.com">Let's talk</a>
+      <div class="links">
+        <a href="https://github.com/carinyperez">GitHub</a>
+        <a href="https://www.linkedin.com/in/cariny-perez-88aba478">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">&copy; <span id="y">2026</span> Cariny Perez</div></footer>
+<script>document.getElementById("y").textContent=new Date().getFullYear();</script>
+</body>
+</html>
