@@ -48,17 +48,75 @@ h2::after{content:"";flex:1;height:1px;background:var(--line)}
 .btn-light{margin-top:.75rem;border-color:#fff;color:#fff}
 .btn-light:hover{background:#fff;color:var(--accent-dark)}
 .btn-light:focus-visible{outline-color:#fff}
-.projects{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-.project{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:8px;padding:1.5rem}
-.project h3{font-size:1.2rem;margin-bottom:.6rem}
-.project p{margin:0;color:var(--muted);font-size:1rem}
+.projects-sec .wrap{max-width:1080px}
+.projects-sec h2{margin-bottom:.75rem}
+.section-intro{color:var(--muted);margin:0 0 3rem}
+.feature{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:3rem;align-items:center;margin:0 0 4.5rem}
+.feature.rev{grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
+.feature.rev .mock{order:2}
+.feature h3{font-size:1.35rem;margin-bottom:.75rem}
+.feature p{color:var(--muted);margin:0 0 .9rem}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding:0;margin:1rem 0 0}
+.tags li{font-size:.8rem;font-weight:600;color:var(--accent-dark);background:var(--surface);border:1px solid var(--line);padding:.2rem .7rem;border-radius:999px}
+.project{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:8px;padding:1.75rem}
+.project h3{font-size:1.35rem;margin-bottom:.6rem}
+.project p{margin:0;color:var(--muted)}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+.mock-note{margin:1.5rem 0 0;font-size:.85rem;color:var(--muted)}
+.mock{transition:transform .25s ease-out;will-change:transform;container-type:inline-size;border:1px solid #d5e2e4;border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 20px 45px rgba(16,58,64,.14)}
+.mock-body{font-size:1.9cqw;line-height:1.35;color:#1f2a37}
+.m-bar{display:flex;gap:.45em;padding:.7em 1em;background:#eef4f5;border-bottom:1px solid #dbe6e8}
+.m-bar i{width:.75em;height:.75em;border-radius:50%;background:#c9d6d8;display:block}
+.m-app{display:grid;grid-template-columns:9em minmax(0,1fr)}
+.m-side{background:#1d5459;color:#d7ecee;padding:1.1em .9em;display:flex;flex-direction:column;gap:.8em}
+.m-side span{opacity:.75}.m-side b{color:#fff}
+.m-main{padding:1.2em;background:#f7fafb;display:flex;flex-direction:column;gap:.9em;min-width:0}
+.m-tabs{display:flex;border:1px solid #dbe6e8;border-radius:.4em;overflow:hidden;width:max-content;background:#fff}
+.m-tabs span{padding:.4em .8em;border-right:1px solid #dbe6e8}.m-tabs span:last-child{border-right:0}
+.m-tabs .on{background:#e3f3f3;color:#0b4f57;font-weight:700}
+.m-kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8em}
+.m-card{background:#fff;border:1px solid #dbe6e8;border-radius:.4em;padding:.8em}
+.m-label{font-size:.72em;letter-spacing:.06em;text-transform:uppercase;color:#5b6275;font-weight:700}
+.m-num{font-size:2em;font-weight:800;line-height:1.1;margin-top:.15em}
+.m-red{color:#b23b3b}
+.m-row{display:grid;grid-template-columns:minmax(0,1fr) 5em 3.5em 5.5em;gap:.5em;align-items:center;padding:.5em 0;border-top:1px solid #eef2f3}
+.m-row.h{border-top:0;padding-top:0}
+.m-row.tot{font-weight:800;background:#f1f6f7;margin:0 -.8em -.8em;padding:.55em .8em}
+.r{text-align:right}
+.m-who{display:flex;align-items:center;gap:.5em;min-width:0}
+.m-av{width:2.2em;height:2.2em;border-radius:50%;background:#2b6c71;color:#fff;display:grid;place-items:center;font-size:.75em;font-weight:700;flex:none}
+.m-av.g{background:#4b5563}
+.m-sub{color:#6b7280;font-size:.85em}
+.m-gbar{display:inline-block;height:.4em;border-radius:1em;background:#3aa58a;vertical-align:middle;margin-right:.4em}
+.m-link{color:#0b7a80;font-weight:700}
+.m-pill{font-size:.75em;border:1px solid #9fd0d2;color:#0b4f57;padding:.1em .6em;border-radius:1em;background:#eef8f8;white-space:nowrap}
+.m-tag{font-size:.7em;font-weight:700;letter-spacing:.05em;border:1px solid #dbe6e8;padding:.1em .45em;border-radius:.25em;color:#374151;background:#fff}
+.m-claim{display:grid;grid-template-columns:auto minmax(0,1fr) auto auto;gap:.7em;align-items:center;padding:.5em 0;border-top:1px solid #eef2f3}
+.m-claim:first-of-type{border-top:0}
+.m-days{font-weight:800;color:#b23b3b;min-width:2.2em;text-align:right}
+.m-inbox{grid-template-columns:15em minmax(0,1fr)}
+.m-list{background:#fff;border-right:1px solid #dbe6e8;display:flex;flex-direction:column}
+.m-filters{display:flex;gap:.4em;padding:.8em}
+.m-filters span{border:1px solid #dbe6e8;border-radius:1em;padding:.15em .7em;font-size:.85em}
+.m-filters .on{background:#1d5459;color:#fff;border-color:#1d5459}
+.m-mail{padding:.7em .8em;border-top:1px solid #eef2f3;display:flex;flex-direction:column;gap:.3em}
+.m-mail.sel{background:#eef8f8;box-shadow:inset .25em 0 0 #2b8a8f}
+.m-mail .t{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:600}
+.m-mail .f{display:flex;justify-content:space-between;align-items:center}
+.m-h{font-size:1.3em;font-weight:800;color:#0b4f57;line-height:1.2}
+.m-email{background:#fff;border:1px solid #dbe6e8;border-radius:.4em;padding:.8em;display:flex;flex-direction:column;gap:.35em}
+.m-review{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8em}
+.m-select{display:inline-block;border:1px solid #dbe6e8;border-radius:.3em;padding:.25em .6em;font-weight:700;background:#f7fafb;margin:.4em .4em 0 0}
+.m-btn{align-self:flex-end;background:#2b8a5e;color:#fff;font-weight:700;padding:.6em 1.1em;border-radius:.35em}
+@container (max-width:520px){.mock-body{font-size:2.7cqw}.m-side,.m-list{display:none}.m-app,.m-inbox{grid-template-columns:minmax(0,1fr)}}
 .contact{text-align:center}
 .contact h2{justify-content:center}
 .contact h2::after,.contact h2::before{content:"";flex:1;height:1px;background:var(--line)}
 .contact p{color:var(--muted);max-width:46ch;margin:0 auto 2rem}
 .links{display:flex;gap:1.5rem;justify-content:center;margin-top:2rem;flex-wrap:wrap}
 footer{border-top:1px solid var(--line);padding:1.5rem 0 calc(1.5rem + env(safe-area-inset-bottom,0px));color:var(--muted);font-size:.9rem;text-align:center}
-@media (max-width:720px){.about{grid-template-columns:1fr;gap:2.5rem}.about-sec{padding-bottom:6rem;clip-path:polygon(0 0,100% 0,100% 95%,0 100%)}.photo{max-width:320px}section{padding:4rem 0}}
+@media (max-width:720px){.about{grid-template-columns:1fr;gap:2.5rem}.feature,.feature.rev{grid-template-columns:1fr;gap:1.75rem;margin-bottom:3.5rem}.feature.rev .mock{order:0}.about-sec{padding-bottom:6rem;clip-path:polygon(0 0,100% 0,100% 95%,0 100%)}.photo{max-width:320px}section{padding:4rem 0}}
 </style>
 </head>
 <body>
@@ -78,30 +136,89 @@ footer{border-top:1px solid var(--line);padding:1.5rem 0 calc(1.5rem + env(safe-
         <div class="about-text">
           <p>I'm Cariny, a passionate software engineer with experience on both large and small projects in fast-paced environments. Most recently I worked at Equips, building and scaling a work order and claims management platform.</p>
           <p>I've worked with many frameworks and libraries, and I spend most of my time in the JavaScript/TypeScript ecosystem, especially React, Node, GraphQL and AWS. I'm always learning and growing my skill set. I also build with AI every day, using Claude to prototype, design and ship features faster, and I co-led AI skills sessions for my engineering team.</p>
-          <p>When I'm not coding, you'll find me hanging out with my dog, reading, playing video games or training in martial arts.</p>
+          <p>When I'm not coding, you'll find me hanging out with my friends, reading, traveling or training martial arts.</p>
           <a class="btn btn-light" href="cariny_perez_resume.pdf" target="_blank" rel="noopener">Resume</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="projects">
+  <section id="projects" class="projects-sec">
     <div class="wrap">
-      <h2>Projects</h2>
-      <div class="projects">
-        <article class="project">
-          <h3>Recurring service request schedules</h3>
-          <p>Lets users set up recurring preventative maintenance once. Before this, every service request had to be created by hand.</p>
-        </article>
-        <article class="project">
-          <h3>Productivity dashboard</h3>
-          <p>A dashboard built for a major insurance client, with a working mock made in Claude Code to get stakeholder feedback early.</p>
-        </article>
-        <article class="project">
-          <h3>Invoice and cancellation auto-linking</h3>
-          <p>An AI-assisted workflow that automatically links invoices and cancellations in the service inbox.</p>
-        </article>
-      </div>
+      <h2>Work projects</h2>
+      <p class="section-intro">Selected work from my time as a software engineer at Equips.</p>
+      <article class="feature">
+        <div class="mock" role="img" aria-label="Recreated mockup of the adjuster dashboard with sample data: period filters, claim counts, claims by team, and claims waiting on adjudication">
+          <div class="mock-body">
+            <div class="m-bar"><i></i><i></i><i></i></div>
+            <div class="m-app">
+              <div class="m-side"><span>Claims</span><b>Control center</b><span>Contracts</span><span>Invoices</span><span>Inbox</span></div>
+              <div class="m-main">
+                <div class="m-tabs"><span class="on">Today</span><span>This week</span><span>This month</span><span>Quarter</span></div>
+                <div class="m-kpis">
+                  <div class="m-card"><div class="m-label">Claims created</div><div class="m-num">214</div></div>
+                  <div class="m-card"><div class="m-label">Open claims</div><div class="m-num">18</div></div>
+                  <div class="m-card"><div class="m-label">Not adjudicated 10d</div><div class="m-num m-red">27</div></div>
+                </div>
+                <div class="m-card">
+                  <div class="m-row h m-label"><span>Team</span><span class="r">Open</span><span class="r">New</span><span class="r">Overdue</span></div>
+                  <div class="m-row"><span class="m-who"><span class="m-av">TA</span><span>Team A<br><span class="m-sub">9 adjusters</span></span></span><span class="r"><span class="m-gbar" style="width:1.6em"></span>7</span><span class="r">7</span><span class="r m-red">64</span></div>
+                  <div class="m-row"><span class="m-who"><span class="m-av">TB</span><span>Team B<br><span class="m-sub">8 adjusters</span></span></span><span class="r"><span class="m-gbar" style="width:2.5em"></span>11</span><span class="r">11</span><span class="r m-red">88</span></div>
+                  <div class="m-row tot"><span>All teams</span><span class="r">18</span><span class="r">18</span><span class="r">152</span></div>
+                </div>
+                <div class="m-card">
+                  <div class="m-label" style="margin-bottom:.4em">Not adjudicated within 10 days · oldest first</div>
+                  <div class="m-claim"><span class="m-av g">JR</span><span><span class="m-link">SR100482</span> <span class="m-sub">Air conditioning</span><br>Jordan Rivera · Austin, TX</span><span class="m-pill">Open</span><span class="m-days">41d</span></div>
+                  <div class="m-claim"><span class="m-av g">MC</span><span><span class="m-link">SR100517</span> <span class="m-sub">Water heater</span><br>Maya Chen · Denver, CO</span><span class="m-pill">Open</span><span class="m-days">38d</span></div>
+                  <div class="m-claim"><span class="m-av g">AP</span><span><span class="m-link">SR100563</span> <span class="m-sub">Refrigerator</span><br>Arjun Patel · Raleigh, NC</span><span class="m-pill">Open</span><span class="m-days">33d</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3>Adjuster and manager dashboards</h3>
+          <p>I led the design and delivery of dashboards for a major insurance client, giving managers and adjusters clear visibility into their workload: claims created, open claims, overdue work by team, and claims still waiting on adjudication.</p>
+          <p>I built a working mock in Claude Code first, so stakeholders could react to something real before we wrote production code.</p>
+          <ul class="tags" aria-label="Built with"><li>React</li><li>TypeScript</li><li>GraphQL</li><li>Node</li></ul>
+        </div>
+      </article>
+      <article class="feature rev">
+        <div class="mock" role="img" aria-label="Recreated mockup of the AI-assisted inbox with sample data: vendor emails tagged by category, and a review panel that matches an estimate to a service request">
+          <div class="mock-body">
+            <div class="m-bar"><i></i><i></i><i></i></div>
+            <div class="m-app m-inbox">
+              <div class="m-list">
+                <div class="m-filters"><span class="on">Unhandled</span><span>Processing</span></div>
+                <div class="m-mail sel"><span class="m-sub">Home Warranty Co. · just now</span><span class="t">New estimate EST0417 from Blue Pipe Plumbing</span><span class="f"><span class="m-tag">ESTIMATE</span><span class="m-link">SR100734</span></span></div>
+                <div class="m-mail"><span class="m-sub">Home Warranty Co. · 12 min ago</span><span class="t">Invoice 2291 from Northside HVAC</span><span class="f"><span class="m-tag">INVOICE</span><span class="m-link">SR100702</span></span></div>
+                <div class="m-mail"><span class="m-sub">Home Warranty Co. · 20 min ago</span><span class="t">Fw: Receipt from Lakeview Appliance</span><span class="f"><span class="m-tag">INVOICE</span><span class="m-link">SR100688</span></span></div>
+                <div class="m-mail"><span class="m-sub">Home Warranty Co. · 31 min ago</span><span class="t">Re: Payment status</span><span class="f"><span class="m-tag">PAYMENT</span><span class="m-sub">No SR match</span></span></div>
+              </div>
+              <div class="m-main">
+                <div class="m-h">New estimate EST0417 from Blue Pipe Plumbing</div>
+                <div class="m-email"><span class="m-sub">From Home Warranty Co. · to estimates@example.com</span><span>Blue Pipe Plumbing · Estimate EST0417</span><span><b>USD $450.00</b> · Claim SR100734</span></div>
+                <div class="m-label">Review &amp; link</div>
+                <div class="m-review">
+                  <div class="m-card"><div class="m-label">Category</div><span class="m-select">Estimate ▾</span><span class="m-sub">AI suggested</span></div>
+                  <div class="m-card"><div class="m-label">Matched request</div><span class="m-select m-link">SR100734</span><span class="m-pill">AUTO · 100%</span><div class="m-sub" style="margin-top:.4em">High-confidence match</div></div>
+                </div>
+                <span class="m-btn">Confirm &amp; link to SR100734</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3>AI-assisted inbox linking</h3>
+          <p>Vendors email invoices, estimates and cancellations to a shared inbox. I built an AI-assisted workflow that categorizes each email and matches it to the right service request, so adjusters review the suggestion and confirm it in one click.</p>
+          <ul class="tags" aria-label="Built with"><li>AI-assisted workflow</li><li>TypeScript</li><li>Node</li></ul>
+        </div>
+      </article>
+      <article class="project">
+        <h3>Recurring service request schedules</h3>
+        <p>Customers set up recurring preventative maintenance once, and service requests are generated automatically by location and equipment. Before this, every service request had to be created by hand.</p>
+      </article>
+      <p class="mock-note">Screens are recreated mockups with sample data, not the real product.</p>
     </div>
   </section>
 
@@ -119,6 +236,27 @@ footer{border-top:1px solid var(--line);padding:1.5rem 0 calc(1.5rem + env(safe-
 </main>
 
 <footer><div class="wrap">&copy; <span id="y">2026</span> Cariny Perez</div></footer>
+<script>
+(()=>{
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  document.querySelectorAll(".mock").forEach(el=>{
+    const tilt=e=>{
+      const r=el.getBoundingClientRect();
+      const x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
+      el.style.transform=`perspective(1000px) rotateX(${(-y*10).toFixed(2)}deg) rotateY(${(x*10).toFixed(2)}deg) scale(1.03)`;
+    };
+    const reset=()=>{el.style.transform="";};
+    el.addEventListener("pointermove",tilt);
+    el.addEventListener("pointerdown",tilt);
+    el.addEventListener("pointerleave",reset);
+    el.addEventListener("pointerup",e=>{if(e.pointerType!=="mouse")setTimeout(reset,350);});
+  });
+  const io=new IntersectionObserver(entries=>entries.forEach(en=>{
+    if(en.isIntersecting){en.target.classList.add("in");io.unobserve(en.target);}
+  }),{threshold:.15});
+  document.querySelectorAll(".feature,.project").forEach(el=>{el.classList.add("reveal");io.observe(el);});
+})();
+</script>
 <script>document.getElementById("y").textContent=new Date().getFullYear();</script>
 </body>
 </html>
