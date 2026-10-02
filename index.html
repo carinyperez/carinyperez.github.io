@@ -109,7 +109,22 @@ h2::after{content:"";flex:1;height:1px;background:var(--line)}
 .m-review{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8em}
 .m-select{display:inline-block;border:1px solid #dbe6e8;border-radius:.3em;padding:.25em .6em;font-weight:700;background:#f7fafb;margin:.4em .4em 0 0}
 .m-btn{align-self:flex-end;background:#2b8a5e;color:#fff;font-weight:700;padding:.6em 1.1em;border-radius:.35em}
-@container (max-width:520px){.mock-body{font-size:2.7cqw}.m-side,.m-list{display:none}.m-app,.m-inbox{grid-template-columns:minmax(0,1fr)}}
+.m-top{display:flex;justify-content:space-between;align-items:center;gap:1em;flex-wrap:wrap}
+.m-title{font-size:1.35em;font-weight:800}
+.m-actions{display:flex;gap:.6em;align-items:center}
+.m-seg{display:flex;border:1px solid #dbe6e8;border-radius:.35em;overflow:hidden;background:#fff}
+.m-seg span{padding:.35em .8em;font-weight:700;font-size:.85em;color:#2b6c71;border-right:1px solid #dbe6e8}.m-seg span:last-child{border-right:0}
+.m-seg .on{background:#1d5459;color:#fff}
+.m-create{border:1px solid #dbe6e8;background:#fff;border-radius:.35em;padding:.35em .8em;font-weight:700;font-size:.85em;white-space:nowrap}
+.m-table{background:#fff;border:1px solid #dbe6e8;border-radius:.4em;padding:0 .8em}
+.m-tr{display:grid;grid-template-columns:minmax(0,1.7fr) 4.5em minmax(0,1.3fr) 5.5em minmax(0,1.2fr) 5em;gap:.6em;align-items:center;padding:.6em 0;border-top:1px solid #eef2f3}
+.m-tr.h{border-top:0;font-weight:700;font-size:.8em;color:#374151}
+.m-ellip{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.m-active{font-size:.75em;color:#1f7a4d;background:#e6f5ec;border-radius:1em;padding:.1em .6em;width:max-content}
+.m-freq{font-size:.75em;border-radius:1em;padding:.1em .6em;width:max-content;font-weight:600}
+.f-d{background:#e3eefb;color:#1d4f91}.f-w{background:#e6f5ec;color:#1f7a4d}.f-m{background:#efe8fb;color:#5b3a9b}.f-q{background:#fdf0dc;color:#9a5b0b}
+.m-foot{display:flex;justify-content:flex-end;gap:1.5em;padding:.6em 0;color:#6b7280;font-size:.85em;border-top:1px solid #eef2f3}
+@container (max-width:520px){.m-tr{grid-template-columns:minmax(0,1.6fr) 5.5em 4.5em}.m-tr>:nth-child(2),.m-tr>:nth-child(3),.m-tr>:nth-child(5){display:none}.mock-body{font-size:2.7cqw}.m-side,.m-list{display:none}.m-app,.m-inbox{grid-template-columns:minmax(0,1fr)}}
 .contact{text-align:center}
 .contact h2{justify-content:center}
 .contact h2::after,.contact h2::before{content:"";flex:1;height:1px;background:var(--line)}
@@ -214,9 +229,33 @@ footer{border-top:1px solid var(--line);padding:1.5rem 0 calc(1.5rem + env(safe-
           <ul class="tags" aria-label="Built with"><li>AI-assisted workflow</li><li>TypeScript</li><li>Node</li></ul>
         </div>
       </article>
-      <article class="project">
-        <h3>Recurring service request schedules</h3>
-        <p>Customers set up recurring preventative maintenance once, and service requests are generated automatically by location and equipment. Before this, every service request had to be created by hand.</p>
+      <article class="feature">
+        <div class="mock" role="img" aria-label="Recreated mockup of the service request schedules list with sample data: recurring schedules with assignee, frequency, location and next due date">
+          <div class="mock-body">
+            <div class="m-bar"><i></i><i></i><i></i></div>
+            <div class="m-app">
+              <div class="m-side"><span>Work</span><span>Service requests</span><b>Service schedules</b><span>Calendar</span><span>Assets</span></div>
+              <div class="m-main">
+                <div class="m-top"><span class="m-title">Service request schedules</span><span class="m-actions"><span class="m-seg"><span class="on">List</span><span>Calendar</span></span><span class="m-create">+ Create</span></span></div>
+                <div class="m-table">
+                  <div class="m-tr h"><span>Name</span><span>Status</span><span>Assignee</span><span>Frequency</span><span>Location</span><span>Next due</span></div>
+                    <div class="m-tr"><span class="m-link m-ellip">Air handler PM</span><span class="m-active">• Active</span><span class="m-who"><span class="m-av">SO</span><span class="m-ellip">Sam O.</span></span><span class="m-freq f-d">Daily</span><span class="m-link m-ellip">Roof</span><span>10/02</span></div>
+                    <div class="m-tr"><span class="m-link m-ellip">Boiler check</span><span class="m-active">• Active</span><span class="m-who"><span class="m-av">LB</span><span class="m-ellip">Lena B.</span></span><span class="m-freq f-w">Weekly</span><span class="m-link m-ellip">Boiler room</span><span>10/09</span></div>
+                    <div class="m-tr"><span class="m-link m-ellip">Lobby walk</span><span class="m-active">• Active</span><span class="m-who"><span class="m-av">PN</span><span class="m-ellip">Priya N.</span></span><span class="m-freq f-m">Monthly</span><span class="m-link m-ellip">Lobby</span><span>10/31</span></div>
+                    <div class="m-tr"><span class="m-link m-ellip">Elevator check</span><span class="m-active">• Active</span><span class="m-who"><span class="m-av">DK</span><span class="m-ellip">Dana K.</span></span><span class="m-freq f-m">Monthly</span><span class="m-link m-ellip">Tower B</span><span>10/31</span></div>
+                    <div class="m-tr"><span class="m-link m-ellip">Gate service</span><span class="m-active">• Active</span><span class="m-who"><span class="m-av">OH</span><span class="m-ellip">Omar H.</span></span><span class="m-freq f-q">Quarterly</span><span class="m-link m-ellip">North gate</span><span>01/15</span></div>
+                  <div class="m-foot"><span>Rows per page 5</span><span>1–5 of 248</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3>Recurring service request schedules</h3>
+          <p>Customers set up recurring preventative maintenance once, and service requests are generated automatically by location and equipment. Before this, every service request had to be created by hand.</p>
+          <p>Teams can see every schedule at a glance, with its assignee, frequency, location and next due date.</p>
+          <ul class="tags" aria-label="Built with"><li>React</li><li>TypeScript</li><li>GraphQL</li><li>Node</li></ul>
+        </div>
       </article>
       <p class="mock-note">Screens are recreated mockups with sample data, not the real product.</p>
     </div>
